@@ -1,0 +1,16 @@
+---
+
+- name: FLUENTD | Install
+  include: install.yml
+  tags:
+    - install
+
+- name: FLUENTD | Configure
+  include: config.yml
+  tags:
+    - configure
+
+- name: FLUENTD | Service
+  include: service.yml
+  tags:
+    - service
