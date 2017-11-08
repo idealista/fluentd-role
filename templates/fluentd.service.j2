@@ -1,0 +1,18 @@
+[Unit]
+Description=Fluentd
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/run/fluentd/fluentd.pid
+RuntimeDirectory=fluentd
+
+User={{ fluentd_user }}
+Group={{ fluentd_group }}
+
+ExecStart=/usr/local/bin/fluentd -d /run/fluentd/fluentd.pid -c {{ fluentd_conf_path }}/fluent.conf -o {{ fluentd_log_file }}
+ExecStop=/usr/bin/kill -9 $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

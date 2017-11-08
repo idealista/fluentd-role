@@ -1,0 +1,7 @@
+---
+
+- name: restart fluentd
+  systemd:
+    name: fluentd
+    state: restarted
+  when: fluentd_service_state != 'stopped'

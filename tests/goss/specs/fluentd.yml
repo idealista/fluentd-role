@@ -1,0 +1,73 @@
+file:
+  /etc/fluent:
+    exists: true
+    mode: "0755"
+    owner: fluentd
+    group: fluentd
+    filetype: directory
+  /var/log/fluent/fluent.log:
+    exists: true
+    mode: "0644"
+    owner: fluentd
+    group: fluentd
+    filetype: file
+  /var/run/fluentd/fluentd.pid:
+    exists: true
+    mode: "0644"
+    owner: fluentd
+    group: fluentd
+    filetype: file
+
+port:
+  tcp:8888:
+    listening: true
+    ip:
+    - 0.0.0.0
+  tcp:24220:
+    listening: true
+    ip:
+    - 0.0.0.0
+  tcp:24224:
+    listening: true
+    ip:
+    - 0.0.0.0
+  tcp:24230:
+    listening: true
+    ip:
+    - 127.0.0.1
+  udp:24224:
+    listening: true
+    ip:
+    - 0.0.0.0
+
+service:
+  fluentd:
+    enabled: true
+    running: true
+
+user:
+  fluentd:
+    exists: true
+    uid: 1000
+    gid: 1000
+    groups:
+    - fluentd
+    home: /home/fluentd
+    shell: ""
+
+group:
+  fluentd:
+    exists: true
+    gid: 1000
+
+command:
+  fluentd --version:
+    exit-status: 0
+    stdout:
+    - fluentd 0.12.40
+    stderr: []
+    timeout: 10000
+
+process:
+  fluentd:
+    running: true
