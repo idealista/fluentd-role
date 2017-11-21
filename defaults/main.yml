@@ -1,7 +1,6 @@
 #### installation variables ####
 fluentd_user: fluentd
 fluentd_group: fluentd
-fluentd_conf_file: "{{ playbook_dir }}/files/fluentd/fluent.conf"
 fluentd_conf_path: "/etc/fluent"
 fluentd_log_path: "/var/log/fluent"
 fluentd_log_file: "{{ fluentd_log_path }}/fluent.log"
