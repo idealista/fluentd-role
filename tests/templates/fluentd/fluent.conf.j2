@@ -1,0 +1,62 @@
+{{ ansible_managed }}
+###
+# sample file copied from "fluentd --setup" result
+###
+
+# In v1 configuration, type and id are @ prefix parameters.
+# @type and @id are recommended. type and id are still available for backward compatibility
+
+
+## built-in TCP input
+## $ echo <json> | fluent-cat <tag>
+<source>
+  @type forward
+  @id forward_input
+</source>
+
+
+# HTTP input
+# http://localhost:8888/<tag>?json=<json>
+<source>
+  @type http
+  @id http_input
+
+  port 8888
+</source>
+
+<source>
+  @type monitor_agent
+  @id monitor_agent_input
+
+  port 24220
+</source>
+
+# Listen DRb for debug
+<source>
+  @type debug_agent
+  @id debug_agent_input
+
+  bind 127.0.0.1
+  port 24230
+</source>
+
+## match tag=debug.** and dump to console
+<match debug.**>
+  @type stdout
+  @id stdout_output
+</match>
+
+# match tag=system.** and forward to another fluent server
+<match system.**>
+  @type forward
+  @id forward_output
+
+  <server>
+    host 192.168.0.11
+  </server>
+  <secondary>
+    <server>
+      host 192.168.0.12
+    </server>
+  </secondary>
+</match>
