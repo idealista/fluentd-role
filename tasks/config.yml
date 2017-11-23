@@ -17,8 +17,8 @@
     mode: 0755
 
 - name: FLUENTD | Copy server config
-  copy:
-    src: "{{ fluentd_conf_file }}"
+  template:
+    src: "{{ fluentd_playbook_templates_path }}/fluent.conf.j2"
     dest: "{{ fluentd_conf_path }}/fluent.conf"
     owner: "{{ fluentd_user }}"
     group: "{{ fluentd_group }}"
@@ -26,7 +26,7 @@
 
 - name: FLUENTD | Copy fluentd service config
   template:
-    src: fluentd.service.j2
+    src: fluentd/fluentd.service.j2
     dest: /lib/systemd/system/fluentd.service
     owner: "{{ fluentd_user }}"
     group: "{{ fluentd_group }}"

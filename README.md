@@ -1,4 +1,5 @@
 ![Logo](logo.gif)
+
 [![Build Status](https://travis-ci.org/idealista/fluentd-role.svg?branch=master)](https://travis-ci.org/idealista/fluentd-role)
 # Fluentd Ansible role
 
