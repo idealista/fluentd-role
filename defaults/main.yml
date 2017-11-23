@@ -9,3 +9,5 @@ fluentd_plugins: []
 # current state: started, stopped, restarted, reloaded
 fluentd_service_state: started
 fluentd_service_enabled: yes # yes, no
+
+fluentd_playbook_templates_path: "{{ playbook_dir }}/templates/fluentd"
