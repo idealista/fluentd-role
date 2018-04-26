@@ -23,6 +23,7 @@
     owner: "{{ fluentd_user }}"
     group: "{{ fluentd_group }}"
     mode: 0644
+  notify: restart fluentd
 
 - name: FLUENTD | Copy fluentd service config
   template:
