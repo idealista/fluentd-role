@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 
 ## [Unreleased](https://github.com/idealista/fluentd-role/tree/develop)
 
+## [1.1.1](https://github.com/idealista/fluentd-role/tree/1.1.1)
+## [Full Changelog](https://github.com/idealista/fluentd-role/compare/1.1.0...1.1.1)
+## Changed
+- *[#10](https://github.com/idealista/fluentd-role/issues/10) Restart service when main configuration is changed* @sorobon
+
 ## [1.1.0](https://github.com/idealista/fluentd-role/tree/1.1.0)
 ## [Full Changelog](https://github.com/idealista/fluentd-role/compare/1.0.0...1.1.0)
 ### Changed
@@ -12,6 +17,5 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a ch
 - *Fluentd config template path depends on a variable* @jnogol
 
 ## [1.0.0](https://github.com/idealista/fluentd-role/tree/1.0.0) (2017-11-08)
-
 ### Added
 - *Install fluent using gem* @jdvr
