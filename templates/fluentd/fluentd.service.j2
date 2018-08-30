@@ -10,7 +10,7 @@ RuntimeDirectory=fluentd
 User={{ fluentd_user }}
 Group={{ fluentd_group }}
 
-ExecStart=/usr/local/bin/fluentd -d /run/fluentd/fluentd.pid -c {{ fluentd_conf_path }}/fluent.conf -o {{ fluentd_log_file }}
+ExecStart=/usr/local/bin/fluentd -d /run/fluentd/fluentd.pid -c {{ fluentd_conf_path }}/fluent.conf -o {{ fluentd_log_file }} {{ fluentd_log_rotate }}
 ExecStop=/usr/bin/kill -9 $MAINPID
 Restart=always
 
