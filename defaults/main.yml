@@ -1,13 +1,19 @@
-#### installation variables ####
+# Installation variables
 fluentd_user: fluentd
 fluentd_group: fluentd
+
+fluentd_version: "1.2.5"
+
 fluentd_conf_path: "/etc/fluent"
 fluentd_log_path: "/var/log/fluent"
 fluentd_log_file: "{{ fluentd_log_path }}/fluent.log"
-fluentd_version: "0.12.40"
+
 fluentd_plugins: []
-# current state: started, stopped, restarted, reloaded
-fluentd_service_state: started
+
+# Service variables
+fluentd_service_state: started # current state: started, stopped, restarted, reloaded
 fluentd_service_enabled: yes # yes, no
 
+# Templates path
 fluentd_playbook_templates_path: "{{ playbook_dir }}/templates/fluentd"
+fluentd_service_template_path: fluentd/fluentd.service.j2
