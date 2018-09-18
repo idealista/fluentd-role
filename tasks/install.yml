@@ -10,26 +10,25 @@
     name: "{{ fluentd_user }}"
     group: "{{ fluentd_group }}"
 
-
-- name: FLUENTD | install required libs
+- name: FLUENTD | Install required libs
   apt:
     name: "{{ item }}"
     update_cache: yes
   with_items: "{{ fluentd_required_libs }}"
 
-- name: FLUENTD | install fluentd gem
+- name: FLUENTD | Install fluentd gem
   gem:
     name: fluentd
     state: present
     version: "{{ fluentd_version }}"
     user_install: no
-  changed_when: false
+  notify: restart fluentd
 
-- name: FLUENTD | install fluentd plugin gems
+- name: FLUENTD | Install fluentd plugin gems
   gem:
     name: "{{ item }}"
     state: present
     user_install: no
   with_items:
     - "{{ fluentd_plugins }}"
-  changed_when: false
+  notify: restart fluentd
