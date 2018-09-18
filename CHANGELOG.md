@@ -3,11 +3,14 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
 ## [Unreleased](https://github.com/idealista/fluentd-role/tree/develop)
+
+## [1.2.0](https://github.com/idealista/fluentd-role/tree/1.2.0)
+## [Full Changelog](https://github.com/idealista/fluentd-role/compare/1.1.2...1.2.0)
 ## Added
-- *Ability of providing service template via playbook* @jnogol
+- *[#15](https://github.com/idealista/fluentd-role/pull/15) Ability of providing service template via playbook* @jnogol
 ## Changed
-- *Update default version to 1.2.5* @jnogol
-- *Use SIGTERM to stop Fluentd service* @jnogol
+- *[#15](https://github.com/idealista/fluentd-role/pull/15) Update default version to 1.2.5* @jnogol
+- *[#15](https://github.com/idealista/fluentd-role/pull/15) Use SIGTERM to stop Fluentd service* @jnogol
 
 ## [1.1.2](https://github.com/idealista/fluentd-role/tree/1.1.2)
 ## [Full Changelog](https://github.com/idealista/fluentd-role/compare/1.1.1...1.1.2)
