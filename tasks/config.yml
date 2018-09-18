@@ -27,7 +27,7 @@
 
 - name: FLUENTD | Copy fluentd service config
   template:
-    src: fluentd/fluentd.service.j2
+    src: "{{ fluentd_service_template_path }}"
     dest: /lib/systemd/system/fluentd.service
     owner: "{{ fluentd_user }}"
     group: "{{ fluentd_group }}"
