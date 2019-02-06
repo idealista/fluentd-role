@@ -11,8 +11,9 @@ User={{ fluentd_user }}
 Group={{ fluentd_group }}
 
 ExecStart=/usr/local/bin/fluentd -d /run/fluentd/fluentd.pid -c {{ fluentd_conf_path }}/fluent.conf -o {{ fluentd_log_file }}
-ExecStop=/usr/bin/kill $MAINPID
+ExecStop=/bin/kill $MAINPID
 Restart=always
+KillSignal=SIGTERM
 
 [Install]
 WantedBy=multi-user.target
