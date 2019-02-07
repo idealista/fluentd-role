@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/idealista/fluentd-role.svg?branch=master)](https://travis-ci.org/idealista/fluentd-role)
 # Fluentd Ansible role
 
-This ansible role installs fluent agent in a debian environment.
+This ansible role installs fluent agent in a Debian environment.
 
 - [Getting Started](#getting-started)
 	- [Prerequisities](#prerequisities)
@@ -18,7 +18,7 @@ This ansible role installs fluent agent in a debian environment.
 
 ## Getting Started
 
-These instructions will get you a copy of the role for your ansible playbook. Once launched, it will install a [fluentd](https://fluentd.io/) agent.
+These instructions will get you a copy of the role for your Ansible playbook. Once launched, it will install a [fluentd](https://fluentd.io/) agent.
 
 ### Prerequisities
 
@@ -81,9 +81,9 @@ See also the list of [contributors](https://github.com/idealista/fluentd-role/co
 
 ## License
 
-![Apache 2.0 Licence](https://img.shields.io/hexpm/l/plug.svg)
+![Apache 2.0 License](https://img.shields.io/hexpm/l/plug.svg)
 
-This project is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license - see the [LICENSE.txt](LICENSE.txt) file for details.
+This project is licensed under the [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) license - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
