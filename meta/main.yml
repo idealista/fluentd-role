@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  company: Idealista S.A.
+  company: Idealista S.A.U
   description: Fluentd is a data collector for unified logging layer.
   min_ansible_version: 2.2.1.0
   license: Apache 2.0
