@@ -11,7 +11,7 @@
     group: "{{ fluentd_group }}"
 
 - name: FLUENTD | Install required libs
-  apt:
+  package:
     name: "{{ item }}"
     update_cache: yes
   with_items: "{{ fluentd_required_libs }}"
