@@ -17,3 +17,5 @@ fluentd_service_enabled: yes # yes, no
 # Templates path
 fluentd_playbook_templates_path: "{{ playbook_dir }}/templates/fluentd"
 fluentd_service_template_path: fluentd/fluentd.service.j2
+
+fluentd_required_libs: ["ruby", "ruby-dev"]

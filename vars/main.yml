@@ -1,2 +1,1 @@
 ---
-fluentd_required_libs: ["ruby", "ruby-dev"]
