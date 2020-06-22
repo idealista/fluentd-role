@@ -1,6 +1,7 @@
 # Installation variables
 fluentd_user: fluentd
 fluentd_group: fluentd
+fluentd_secondary_groups: []
 
 fluentd_version: "1.3.3"
 
@@ -9,6 +10,7 @@ fluentd_log_path: "/var/log/fluent"
 fluentd_log_file: "{{ fluentd_log_path }}/fluent.log"
 
 fluentd_plugins: []
+fluentd_plugins_required_libs: []
 
 # Service variables
 fluentd_service_state: started # current state: started, stopped, restarted, reloaded
