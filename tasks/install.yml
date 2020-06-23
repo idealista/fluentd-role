@@ -13,9 +13,8 @@
 
 - name: FLUENTD | Install required libs
   apt:
-    name: "{{ item }}"
+    name: "{{ fluentd_required_libs }}"
     update_cache: yes
-  with_items: "{{ fluentd_required_libs }}"
 
 - name: FLUENTD | Install fluentd gem
   gem:
