@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep a changelog](https://github.com/olivierlacan/keep-a-changelog).
 
+## Added
+- *[#28](https://github.com/idealista/fluentd-role/pull/28) (2024-01-17)- Add ".gitattributes" file for linguist detection.* @ygomezsaiz
+
 ## [Unreleased](https://github.com/idealista/fluentd-role/tree/develop)
 
 ## [1.3.0](https://github.com/idealista/fluentd-role/tree/1.3.0)
